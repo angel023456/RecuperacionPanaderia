@@ -29,9 +29,6 @@ $telefono = $_POST['Telefono'] ;
 
 // Validar que los campos no estén vacíos
 if (!empty($nombre) && !empty($apellidos) && !empty($email) && !empty($telefono)) {
-   
-    // Verificar que el correo electrónico sea válido
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Crear la sentencia SQL de inserción
         $sql = "INSERT INTO clientes (nombre, apellidos, email, telefono) VALUES ('$nombre', '$apellidos', '$email', '$telefono')";
 
